@@ -16,7 +16,7 @@ func main() {
   msg = strings.ToLower(msg)
 
   // The author is supposed to be after "by"
-  byPosition := strings.Index(msg, " by ")
+  byPosition := strings.LastIndex(msg, " by ")
   author := msg[byPosition+4:]
   author = strings.ReplaceAll(author, " ", "_")
 
