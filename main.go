@@ -19,6 +19,9 @@ func main() {
   msg = strings.ReplaceAll(msg, "'", "-")
   msg = strings.ReplaceAll(msg, "’", "-")
 
+  // Remove the comma
+  msg = strings.ReplaceAll(msg, ",", "")
+
   // The author is supposed to be after "by"
   byPosition := strings.LastIndex(msg, " by ")
   author := msg[byPosition+4:]
